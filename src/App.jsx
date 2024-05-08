@@ -1,9 +1,10 @@
 import { useState } from 'react'
 // import './App.css'
+import { FlagsGrid } from './FlagsGrid'
 
 function App() {
   return <>
-    <h1>XCountriesSearch</h1>       
+    <FlagsGrid />
   </>
 }
 
