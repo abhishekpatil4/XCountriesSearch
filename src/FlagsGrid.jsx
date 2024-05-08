@@ -4,6 +4,7 @@ import "./flags.css"
 import { FlagCard } from "./FlagCard";
 export const FlagsGrid = () => {
     const [data, setData] = useState();
+    const [search, setSearch] = useState("");
     useEffect(() => {
         const getData = async () => {
             try {
@@ -17,13 +18,18 @@ export const FlagsGrid = () => {
         }
         getData();
     }, [])
+    
+    const filteredData = data?.filter((d) => 
+        d.name.official.toLowerCase().includes(search.toLocaleLowerCase())
+    )
+    
     return <>
     <div className="search-bar-div">
-        <input type="text" placeholder="Search Country"/>
+        <input type="text" placeholder="Search Country" onChange={(e) => setSearch(e.target.value)} value={search}/>
     </div>
         <div className="grid-container">
             {
-                data && data.map((d) =>
+                filteredData && filteredData.map((d) =>
                     <div className="grid-item">
                         <FlagCard url={d.flags.png} name={d.name.official}/>
                     </div>
