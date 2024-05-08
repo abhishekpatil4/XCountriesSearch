@@ -18,6 +18,9 @@ export const FlagsGrid = () => {
         getData();
     }, [])
     return <>
+    <div className="search-bar-div">
+        <input type="text" placeholder="Search Country"/>
+    </div>
         <div className="grid-container">
             {
                 data && data.map((d) =>
