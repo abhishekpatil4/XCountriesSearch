@@ -4,6 +4,7 @@
     grid-template-columns: auto auto auto auto auto auto auto;
     row-gap: 20px;
     margin: 30px;
+    justify-content: center;
 }
 
 .grid-item{
@@ -27,7 +28,7 @@ input{
     font-size: medium;
 }
 
-.flag-card{
+.countryCard{
     border-radius: 6px;
     border: 1px solid rgb(165, 165, 165);
     display: flex;
@@ -37,12 +38,12 @@ input{
     max-width: 220px;
 }
 
-.flag-card img{
+.countryCard img{
     height: 80px;
     padding: 10px;
 }
 
-.flag-card span{
+.countryCard span{
     padding-bottom: 10px;
     padding-left: 10px;
     padding-right: 10px;

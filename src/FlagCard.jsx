@@ -2,7 +2,7 @@ import "./flags.css"
 
 export const FlagCard = ({ url, name }) => {
     return <>
-        <div className="flag-card">
+        <div className="countryCard">
             <img src={url} alt="" />
             <span>{name}</span>
         </div>
