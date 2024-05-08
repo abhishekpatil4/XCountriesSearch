@@ -20,7 +20,7 @@ export const FlagsGrid = () => {
     }, [])
     
     const filteredData = data?.filter((d) => 
-        d.name.official.toLowerCase().includes(search.toLocaleLowerCase())
+        d.name.common.toLowerCase().includes(search.toLocaleLowerCase())
     )
     
     return <>
